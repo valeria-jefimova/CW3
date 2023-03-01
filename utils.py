@@ -45,7 +45,7 @@ def get_formatted_data(data):
         amount = f'{row["operationAmount"]["amount"]} {row["operationAmount"]["currency"]["name"]}'
 
         formatted_data.append(f"""\
-{date} {description}\
+{date} {description}
 {sender_info} {sender_bill} -> Счет {recipient}
 {amount}
 """)

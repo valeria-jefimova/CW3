@@ -1,6 +1,6 @@
 import pytest
 
-from utils import get_last_data, get_formatted_data
+from utils import get_last_data, get_formatted_data, get_filtred_data
 
 
 def test_get_data(test_data):
@@ -8,9 +8,9 @@ def test_get_data(test_data):
     assert operations.json_reader(url)
 
 
-def test_get_filtered_data(get_filtered_data=None):
-    assert len(get_filtered_data) == 3
-    assert len(get_filtered_data, filtered_empty_from=True) == 2
+def test_get_filtered_data(test_data):
+    assert len(get_filtred_data(test_data)) == 3
+    assert len(get_filtred_data(test_data, filtered_empty_from=True)) == 2
 
 
 def test_get_last_data(test_data):
@@ -20,5 +20,5 @@ def test_get_last_data(test_data):
 
 
 def test_get_formatted_data(test_data):
-    data = get_formatted_data[:1]
-    assert data == []
+    data = get_formatted_data(test_data[:1])
+    assert data == ['07.17.2019 Перевод организации\nVisa Classic 2842 87** **** 9012 -> Счет **3655\n48150.39 USD\n']
