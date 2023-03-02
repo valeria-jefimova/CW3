@@ -30,7 +30,7 @@ def get_formatted_data(data):
     for row in data:
         # Перевод даты в формат ДД.MM.ГГГГ (пример: 13.02.2023)
         date_time_str = datetime.strptime(row["date"], "%Y-%m-%dT%H:%M:%S.%f")
-        date = datetime.strftime(date_time_str, "%d.%M.%Y")
+        date = datetime.strftime(date_time_str, "%d.%m.%Y")
 #         # date = datetime.strptime(row["date"], "%Y-%m-%dT%H:%M:%S.%f").strftime("%d.%M.%Y")
         description = row["description"]
 
