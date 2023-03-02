@@ -50,11 +50,3 @@ def get_formatted_data(data):
 {amount}
 """)
     return formatted_data
-
-
-# DATA1 = get_data()
-# b = get_formatted_data(DATA1)
-# print(b)
-
-# for i in a:
-#     print(i)
